@@ -32,22 +32,18 @@ def kesha_maker(array)
 end
 
 def find_a(array)
-  array.find_all do |word|
-    word[0] == "a"
-  end
+  # array.find_all do |word|
+  #   word[0] == "a"
+  # end
 
   # using select method
-    # array.select do |word|
-    #   word[0] == "a"
-    # end
+  array.select do |word|
+    word[0] == "a"
+    end
 end
 
 def sum_array(array)
-  sum = 0
-  array.each do |num|
-    sum+=num
-  end
-  sum
+  array.reduce(:+)
 
   # using reduce method
     # array.reduce(:+)
